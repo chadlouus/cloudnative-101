@@ -23,7 +23,7 @@ data:
 
     listen http-in
         bind *:80
-        server server1 127.0.0.1:8775 maxconn 32
+        server server1 127.0.0.1:8989 maxconn 32
 ```
 
 ```yaml
@@ -61,5 +61,5 @@ spec:
 ```
 
 ```bash
-kubectl exec busybox -- curl $(kubectl get pod vader-service -o=jsonpath='{.status.podIP}'):80
+kubectl exec busybox00 -- curl $(kubectl get pod vader-service -o=jsonpath='{.status.podIP}'):80
 ```
