@@ -3,8 +3,6 @@
 title: Kubernetes Lab 2 - Pod Configuration - PT version
 ---
 
-# Portuguese Version
-
 ## Problema
 - Crie uma definição de pod chamada `yoda-service-pod.yml` e, em seguida, crie um pod no cluster usando essa definição para garantir que ele funcione.
 
