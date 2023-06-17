@@ -1,9 +1,12 @@
-# Portuguese Version
+---
+title: Kubernetes Lab 1 - Pod Creation - PT version
+---
+
 ## Problema
 - Escreva uma definição de pod com o nome `yoda-service-pod.yml` Em seguida, crie um pod no cluster usando essa definição para garantir que ele funcione.
 
 As especificações desse pod são as seguintes:
- - O nome do container deve ser `nginxxx`, sendo xx o seu número de aluno.
+ - O nome do container deve ser `nginx`
  - Use a imagem do contêiner `bitnami/nginx`.
  - O contêiner precisa de um containerPort de `80`.
  - Defina o comando para ser executado como `nginx`.
@@ -11,7 +14,7 @@ As especificações desse pod são as seguintes:
  - Crie o pod em seu namespace `devxx` atribuído, sendo xx o seu número de aluno.
 
 
-## Verificacão
+## Verificação
 Depois de concluir este laboratório, use os seguintes comandos para validar sua solução.
 
 `kubectl get pods -n devxx`\
