@@ -17,7 +17,7 @@ Aqui estão algumas dicas para ajudá-lo a resolver o problema do Hyper Drive:
 - Verifique se as `Probes` estão funcionando corretamente.
 - Para corrigir a implantação, salve e modifique o arquivo yaml para reimplantação.
 
-Verificação
+## Verificação
 
 - Ao executar `kubectl get pods` todos os pods devem estar com `STATUS = Running` e `RESTARTS = 0`
 - Ao executar `kubectl get deployment hyper-drive` deverá se obter ao semelhante a:

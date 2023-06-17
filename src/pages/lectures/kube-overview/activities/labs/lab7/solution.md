@@ -5,7 +5,7 @@ title: Kubernetes Lab 7 - Cron Jobs
 ## Solution
 
 ```
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: xwing-cronjob
