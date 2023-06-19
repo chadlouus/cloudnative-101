@@ -46,8 +46,8 @@ ic plugin install cr
 # login to IBM Cloud
 # from https://cloud.ibm.com icon
 
-# configure IKS cluster
-ic ks cluster config -c iks-bootcamp
+# configure IKS cluster for kubectl
+ibmcloud ks cluster config -c iks-bootcamp
 ```
 ### Install dependencies
 
