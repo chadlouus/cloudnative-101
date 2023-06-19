@@ -21,6 +21,22 @@ The course materials can be viewed at- [https://cloudnative101.dev/](https://clo
 git clone
 ```
 
+### Environment Setup
+```
+snap install kubectl --classic
+snap install docker
+curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+
+cat > .bash_profile
+alias ic=ibmcloud
+alias k=kubectl
+
+source .bash_profile
+
+ic plugin install ks
+ic plugin install cr
+ic ks cluster config -c iks-bootcamp
+```
 ### Install dependencies
 
 ```
