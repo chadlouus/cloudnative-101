@@ -52,10 +52,10 @@ ibmcloud ks cluster config -c iks-bootcamp
 # create ns command for finding out namespace
 cat > /usr/local/bin/ns << EOF
 #! /bin/bash
-CLUSTER=`kubectl config current-context | cut -f1 -d/`
+CLUSTER=\`kubectl config current-context | cut -f1 -d/\`
 if [ $# -eq 0 ]
 then
-        echo $CLUSTER `kubectl config view --minify --output 'jsonpath={..namespace}'`
+        echo $CLUSTER \`kubectl config view --minify --output 'jsonpath={..namespace}'\`
 else
         echo "setting namespace to $1"
         kubectl config set-context --current --namespace=$1
