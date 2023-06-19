@@ -53,7 +53,7 @@ ibmcloud ks cluster config -c iks-bootcamp
 cat > /usr/local/bin/ns << EOF
 #! /bin/bash
 CLUSTER=\`kubectl config current-context | cut -f1 -d/\`
-if [ $# -eq 0 ]
+if [ \$# -eq 0 ]
 then
         echo \$CLUSTER \`kubectl config view --minify --output 'jsonpath={..namespace}'\`
 else
