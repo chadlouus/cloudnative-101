@@ -57,7 +57,7 @@ if [ \$# -eq 0 ]
 then
         echo \$CLUSTER \`kubectl config view --minify --output 'jsonpath={..namespace}'\`
 else
-        echo "setting namespace to $1"
+        echo "setting namespace to \$1"
         kubectl config set-context --current --namespace=\$1
 fi
 EOF
