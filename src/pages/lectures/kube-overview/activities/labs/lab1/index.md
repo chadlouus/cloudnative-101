@@ -12,12 +12,13 @@ The specificationsof this pod are as follows:
  - The container needs a containerPort of `80`.
  - Set the command to run as `nginx`
  - Pass in the `-g daemon off; -q` args to run nginx in quiet mode.
- - Create the pod in the `web` namespace.
+ - Create the pod in the `devNN` namespace. (use your own number, e.g. `dev02`)
 
 
 ## Verification
 
 When you have completed this lab, use the following commands to validate your solution. The 'get pods' command will 
 
-`kubectl get pods -n web`
-`kubectl describe pod nginx -n web`
+`kubectl get pods -n devNN`
+
+`kubectl describe pod nginx -n devNN`
