@@ -55,13 +55,19 @@ cat > /usr/local/bin/ns << EOF
 CLUSTER=\`kubectl config current-context | cut -f1 -d/\`
 if [ $# -eq 0 ]
 then
-        echo $CLUSTER \`kubectl config view --minify --output 'jsonpath={..namespace}'\`
+        echo \$CLUSTER \`kubectl config view --minify --output 'jsonpath={..namespace}'\`
 else
         echo "setting namespace to $1"
-        kubectl config set-context --current --namespace=$1
+        kubectl config set-context --current --namespace=\$1
 fi
 EOF
 
+# make ns command executable
+chmod +x /usr/local/bin/ns
+# to find current namespace
+ns
+# to switch to a different namespace
+ns dev
 ```
 ### Install dependencies
 
