@@ -1,7 +1,28 @@
 ---
 title: Kubernetes Lab 2 - Pod Configuration
 ---
+## Prerequisites
 
+Make sure everytime you create resources that you
+
+- target the right Kubernetes cluster
+- target the right Kubernetes namespace and set it into your kubectl context
+
+```bash
+ibmcloud ks cluster config --cluster iks-bootcamp
+kubectl config set-context --current --namespace=devNN
+```
+
+## Supporting Information
+
+Hint: You can create multi-line strings in YAML e.g. with:
+
+```
+data:
+  filename.cfg: |-
+    line.a=1
+    line.b=2
+```
 ## Problem
 
 - Create a pod definition named `yoda-service-pod.yml`, and then create a pod in the cluster using this definition to make sure it works.
