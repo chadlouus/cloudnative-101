@@ -15,7 +15,10 @@ kubectl config set-context --current --namespace=devNN
 
 ## Supporting Information
 
-Hint: You can create multi-line strings in YAML e.g. with:
+Hint: Pod Yaml attributes
+https://github.com/chadlouus/cloudnative-101/blob/master/src/pages/lectures/kube-configuration/index.md
+
+Hint 2: You can create multi-line strings in YAML e.g. with:
 
 ```
 data:
