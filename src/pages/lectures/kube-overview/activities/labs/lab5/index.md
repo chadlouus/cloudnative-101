@@ -23,7 +23,39 @@ minikube start
 
 Setup the environment:
 ```
-kubectl apply -f https://raw.githubusercontent.com/ibm-cloud-architecture/learning-cloudnative-101/master/lab-setup/lab-5-debug-k8s-setup.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hyper-drive
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hyper-drive
+  template:
+    metadata:
+      labels:
+        app: hyper-drive
+    spec:
+      containers:
+      - name: vader
+        image: ibmcase/vader:1
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          tcpSocket:
+            port: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: light-speed
+spec:
+  selector:
+    run: hyper-drive 
+  ports:
+    - protocol: TCP
+      port: 80
 ```
 
 ## Validate
