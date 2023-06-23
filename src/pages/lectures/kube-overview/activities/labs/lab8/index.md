@@ -43,6 +43,8 @@ yoda-svc   ClusterIP   172.21.235.139   <none>        80/TCP         48s
 To access the jedi-svc we have to find out the public IP addresses of our worker nodes. Using `kubectl get nodes -o wide` gives us private and public ip addresses of our worker nodes. The worker nodes within IBM Cloud are attached to a public and a private VLAN. Alternatively you can also use `ibmcloud ks worker ls --cluster clustername`.
 
 ```bash
+# first change to use the free IKS cluster
+$ ibmcloud ks cluster config -c iks-free
 $ ibmcloud ks worker ls --cluster iks-free
 NAME             STATUS   ROLES    AGE    VERSION
 ID                                                       Public IP         Private IP       Flavor               State    Status   Zone    Version
